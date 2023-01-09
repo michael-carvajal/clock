@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background-color: thistle;
+}
+.container{
+    border: 6px rgb(2, 13, 59) solid;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.numbers{
+    font-size: 100px;
+}
+.info{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    width: 100%;
+    font-size: 30px;
+}
