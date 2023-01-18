@@ -32,6 +32,12 @@ window.onload = function () {
 
     time_zone.innerHTML = timeZoneName;
 
+    var toggleSwitch = document.getElementById("toggle-switch");
+
+    toggleSwitch.addEventListener("click", function (e) {
+        document.body.classList.toggle("night_mode")
+    });
+
 
 
 
