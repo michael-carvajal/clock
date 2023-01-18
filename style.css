@@ -1,32 +1,74 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px;
-    background-color: thistle;
+    height: 100vh;
+    background-image: linear-gradient(70deg, rgb(67, 132, 200), rgb(251, 255, 0));
 }
-.container{
-    border: 6px rgb(2, 13, 59) solid;
-    width: 500px;
+
+.container {
+    border: 12px grey groove;    width: 600px;
+    height: 300px;
     display: flex;
+    padding: 10px;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.numbers{
+.numbers {
     font-size: 100px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-left: 10px;
 }
-.info{
+
+.info {
     display: flex;
     justify-content: space-around;
     flex-direction: row-reverse;
     width: 100%;
     font-size: 30px;
+    margin-top: 20px;
+}
+
+span {
+
+    border-radius: 3%;
+    width: auto;
+
+}
+
+.numbers span:nth-child(1),
+.numbers span:nth-child(3),
+.numbers span:nth-child(5) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: rgb(67, 132, 200);
+    min-width: 150px;
+    background-color: rgb(229, 239, 242);
+    box-shadow: 0 5px 5px 2px rgb(139, 146, 148);
+}
+
+
+.numbers span:nth-child(2),
+.numbers span:nth-child(4) {
+    border: none;
+    flex-shrink: 60;
+}
+
+.amPm {
+    font-size: 20px;
+    color: rgb(67, 132, 200);
+    align-self: flex-start;
+    border: none;
 }

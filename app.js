@@ -4,13 +4,26 @@ window.onload = function () {
     const minutes = document.querySelector('.minutes')
     const seconds = document.querySelector('.seconds')
     const time_zone = document.querySelector('.time_zone')
+    const amPm = document.querySelector('.amPm')
+    let amOrPm = "am"
+
 
     function display_date() {
         let date = new Date();
         console.log('hi');
-        hours.innerHTML = (date.getHours()/2 -1);
+        let amOrPm = "am";
+        let hour = date.getHours();
+        if (hour > 12) {
+            amOrPm = "pm";
+            hour -= 12;
+        }
+        hours.innerHTML = (hour);
         minutes.innerHTML = date.getMinutes();
         seconds.innerHTML = date.getSeconds();
+        amPm.innerHTML = amOrPm;
+        let time = date.toLocaleTimeString();
+
+        console.log(time);
     }
     setInterval(display_date, 1000);
 
@@ -18,6 +31,12 @@ window.onload = function () {
     let timeZoneName = date.toString().match(/\(([A-Za-z\s].*)\)/)[1];
 
     time_zone.innerHTML = timeZoneName;
+
+
+
+
+
+
 
 
 }
